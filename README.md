@@ -1,50 +1,66 @@
-Continuando con los proyectos en Power bi para el portfolio en este caso vamos a hacer una visualización mediante la creación de 2 archivos creados mediante Chat gpt de unas 200 filas.
+Continuando con los proyectos en Power bi para el portfolio en este caso vamos a evaluar un dashboard de ventas creados por Chatgpt que consta de 2 tablas con datos aleatorios de unas 200 filas.
 [ventas_doble_tabla.xlsx](https://github.com/user-attachments/files/22098125/ventas_doble_tabla.xlsx)
 
+Tabla:
+--------------
+La primera tabla es llamada “ventas” contiene registros aleatorios en columnas  Fecha, ID_Producto, Cantidad, Tipo_Venta, Metodo_Pago, Descuento_%.
 
-La primera hoja llamada “Ventas” contiene registros aleatorios en columnas  Fecha, ID_Producto, Cantidad, Tipo_Venta, Metodo_Pago, Descuento_%.
-
-mientras la segunda en la hoja llamada columna contiene las siguientes columnas ID_Producto, Producto, Categoria, Precio_Compra, Precio_Venta
+La segunda tabla, llamadas "productos" contiene las siguientes columnas ID_Producto, Producto, Categoria, Precio_Compra, Precio_Venta
 
 Proceso:
+---------
+Explorado los datos verificamos que no contienen datos en blanco, sin errores, ni outliers procedemos a cargarlo en power bi
 
-En este caso los datos llegan sin errores, sin datos en blancos ni outliers procedemos a cargarlos en Power bi , ya lo con los datos cargados vamos a combinar las tablas de Ventas y Productos mediante el campo ID_Producto
-En la columna Fecha  en 3 columnas distintas, una para el día, otra para el mes  y la ultima para el año. Dentro de la columnas creadas tanto día como mes la pasamos a formato texto solo con sus 3 primeras iníciales 
-Creamos nuevas columas por un lado Ganancia con una expresión DAX SUM(tabla_ventas[Valor_Total_venta]) - SUM(tabla_ventas[Valor_Total_Compra])
-También creamos una columna nueva con DAX las Ganancias%  con la expresion [Ganancia] / SUM(tabla_ventas[Valor_Total_Compra]) 
-De igual forma creamos 2 columnas mas una llamada Valor_Total_Compra y Valor_Total_venta
-Grafico
+Una vez que los datos estan cargado procedemos a combinar las tablas de "venta" y "productos" mediante el campo ID_Producto
 
-<img width="1366" height="768" alt="imagen dashboard" src="https://github.com/user-attachments/assets/42bcf8a6-8678-4797-977f-f3172637c75c" />
+visualizaciones:
+-------------
+La logica de negocio nos pide ciertas visualizaciones
 
-El Dashboard está compuesto de diferentes gráficos como de tarjeta, circular, columnas agrupadas, de área y un treemap
+1 Total de ventas
 
-En el grafico podemos visualizar tarjetas como Ventas totales, Ganancias Totales y Ganancia %
+2 Ganancias
 
-En la tarjeta Producto top podemos observar el producto mas vendido con las unidades aplicando el Filtro top N igualmente en la tarjeta Categoría top
+3 Ganancias porcentuales
 
-Tenemos un grafico de barras agrupadas que nos muestra los productos mas vendidos
+4 Producto mas vendido
 
-En uno de los gráficos circulares observamos si fueron ventas presenciales u online. En el otro grafico circular observamos el tipo de pago realizado por los clientes (tarjeta de crédito, mercado pago, tarjeta de debito, transferencia o efectivo)
+5 Categoria mas vendida
 
-En el grafico Categoría podemos observar en un treemap la cantidad que se vendieron por categoría
+6 Top 5 de productos mas vendidos
 
-Con un grafico de área visualizamos la evolución por días de las ventas
+7 Tipo de venta
 
-En la grafica de columnas apiladas podemos distinguir las ventas por meses del año
+8 Evolucion mensual de las ventas
 
-Tenemos 4 filtros 
+9 Evolucion Diaria
 
-1 por año
+10 Tipo de pago
 
-2 por meses
+11 Ventas por categoria
 
-3 por tipo de venta
+Dentro de los segmentadores nos solicitan
 
-4 por método de pago 
+1 Metodo de pago
 
-Visualizacion
+2 Tipo de venta
 
-mediante paint realizamos un fondo para poder organizar de mejor manera los datos a visualizar 
+3 Año
 
-<img width="960" height="540" alt="fondo" src="https://github.com/user-attachments/assets/853ca920-59ed-4848-9fe0-3209a4048dfd" />
+4 Meses
+
+-------------
+Teniendo en claro lo que debemos visualizar creamos una imagen en power point para poder organizar el lienzo en power bi para la organizacion obtenemos lo siguiente
+![Presentación1](https://github.com/user-attachments/assets/5d032db9-6d31-4a9e-91ad-e984e88d36f7)
+
+
+
+
+
+
+
+
+
+   
+
+
